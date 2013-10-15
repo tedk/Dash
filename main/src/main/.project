@@ -30,4 +30,22 @@
 		<nature>com.android.ide.eclipse.adt.AndroidNature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>api-aidl</name>
+			<type>2</type>
+			<locationURI>$%7BPROJECT_ROOT%7D/api/src/main/aidl</locationURI>
+		</link>
+		<link>
+			<name>api-java</name>
+			<type>2</type>
+			<locationURI>$%7BPROJECT_ROOT%7D/api/src/main/java</locationURI>
+		</link>
+	</linkedResources>
+	<variableList>
+		<variable>
+			<name>PROJECT_ROOT</name>
+			<value>$%7BPARENT-3-PROJECT_LOC%7D</value>
+		</variable>
+	</variableList>
 </projectDescription>
