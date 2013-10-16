@@ -50,7 +50,7 @@ import static com.google.android.apps.dashclock.ExtensionManager.ExtensionWithDa
 public abstract class DashClockRenderer {
     private static final String TAG = LogUtils.makeLogTag(DashClockRenderer.class);
 
-    private static final int MAX_COLLAPSED_EXTENSIONS = 3;
+    private static final int MAX_COLLAPSED_EXTENSIONS = 4;
     private static final int MIN_NORMAL_FONTSIZE_WIDTH_DP = 300;
 
     public static final String PREF_CLOCK_SHORTCUT = "pref_clock_shortcut";
