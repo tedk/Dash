@@ -18,7 +18,7 @@ package com.google.android.apps.dashclock.calendar;
 
 import com.google.android.apps.dashclock.configuration.BaseSettingsActivity;
 
-import net.nurik.roman.dashclock.R;
+import net.homeip.tedk.dash.R;
 
 import android.os.Bundle;
 import android.preference.Preference;

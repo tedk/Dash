@@ -16,7 +16,7 @@
 
 package com.google.android.apps.dashclock.weather;
 
-import net.nurik.roman.dashclock.R;
+import net.homeip.tedk.dash.R;
 
 /**
  * A helper class representing weather data, for use with {@link WeatherExtension}.

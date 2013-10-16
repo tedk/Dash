@@ -20,7 +20,7 @@ import android.os.Bundle;
 
 import com.google.android.apps.dashclock.configuration.BaseSettingsActivity;
 
-import net.nurik.roman.dashclock.R;
+import net.homeip.tedk.dash.R;
 
 public class NextAlarmSettingsActivity extends BaseSettingsActivity {
     @Override

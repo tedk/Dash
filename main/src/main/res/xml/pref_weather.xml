@@ -15,7 +15,7 @@
   -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/net.nurik.roman.dashclock">
+    xmlns:app="http://schemas.android.com/apk/res/net.homeip.tedk.dash">
 
     <ListPreference
         android:key="pref_weather_units"

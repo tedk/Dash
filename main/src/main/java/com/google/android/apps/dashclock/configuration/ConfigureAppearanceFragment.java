@@ -18,7 +18,7 @@ package com.google.android.apps.dashclock.configuration;
 
 import com.google.android.apps.dashclock.ui.PagerPositionStrip;
 
-import net.nurik.roman.dashclock.R;
+import net.homeip.tedk.dash.R;
 
 import android.app.Fragment;
 import android.app.backup.BackupManager;

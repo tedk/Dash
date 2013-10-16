@@ -19,7 +19,7 @@ package com.google.android.apps.dashclock.render;
 import com.google.android.apps.dashclock.*;
 import com.google.android.apps.dashclock.configuration.AppearanceConfig;
 
-import net.nurik.roman.dashclock.R;
+import net.homeip.tedk.dash.R;
 
 import android.appwidget.AppWidgetManager;
 import android.content.ComponentName;

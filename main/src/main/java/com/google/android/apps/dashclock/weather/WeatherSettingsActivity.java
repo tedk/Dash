@@ -18,7 +18,7 @@ package com.google.android.apps.dashclock.weather;
 
 import com.google.android.apps.dashclock.configuration.BaseSettingsActivity;
 
-import net.nurik.roman.dashclock.R;
+import net.homeip.tedk.dash.R;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;

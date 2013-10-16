@@ -16,7 +16,7 @@
 
 package com.google.android.apps.dashclock.ui;
 
-import net.nurik.roman.dashclock.R;
+import net.homeip.tedk.dash.R;
 
 import android.content.Context;
 import android.content.res.Resources;

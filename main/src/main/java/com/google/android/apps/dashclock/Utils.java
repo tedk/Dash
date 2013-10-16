@@ -44,7 +44,7 @@ import com.google.android.apps.dashclock.api.ExtensionData;
 import com.google.android.apps.dashclock.phone.MissedCallsExtension;
 import com.google.android.apps.dashclock.phone.SmsExtension;
 
-import net.nurik.roman.dashclock.R;
+import net.homeip.tedk.dash.R;
 
 import java.io.IOException;
 import java.lang.reflect.Field;

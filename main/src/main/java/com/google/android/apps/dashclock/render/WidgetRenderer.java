@@ -16,7 +16,7 @@
 
 package com.google.android.apps.dashclock.render;
 
-import net.nurik.roman.dashclock.R;
+import net.homeip.tedk.dash.R;
 
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;

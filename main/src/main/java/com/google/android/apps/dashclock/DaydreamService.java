@@ -48,7 +48,7 @@ import com.google.android.apps.dashclock.render.SimpleRenderer;
 import com.google.android.apps.dashclock.render.SimpleViewBuilder;
 import com.google.android.apps.dashclock.ui.EdgeEffectUtil;
 
-import net.nurik.roman.dashclock.R;
+import net.homeip.tedk.dash.R;
 
 import java.util.List;
 

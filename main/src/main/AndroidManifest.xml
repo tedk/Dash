@@ -15,7 +15,7 @@
   -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="net.nurik.roman.dashclock"
+    package="net.homeip.tedk.dash"
     android:versionCode="1"
     android:versionName="See version.properties">
 
@@ -278,7 +278,7 @@
         <!-- For sending logs as attachments -->
 
         <provider android:name="com.google.android.apps.dashclock.LogAttachmentProvider"
-            android:authorities="com.google.android.apps.dashclock.logs"
+            android:authorities="net.homeip.tedk.dash.logs"
             android:exported="true" />
 
     </application>

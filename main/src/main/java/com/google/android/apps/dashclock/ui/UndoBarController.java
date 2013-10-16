@@ -24,7 +24,7 @@ import android.view.View;
 import android.view.ViewPropertyAnimator;
 import android.widget.TextView;
 
-import net.nurik.roman.dashclock.R;
+import net.homeip.tedk.dash.R;
 
 public class UndoBarController {
     private View mBarView;

@@ -25,7 +25,7 @@ import android.graphics.drawable.Drawable;
 import android.widget.EdgeEffect;
 import android.widget.ScrollView;
 
-import net.nurik.roman.dashclock.R;
+import net.homeip.tedk.dash.R;
 
 import java.lang.reflect.Field;
 

@@ -23,7 +23,7 @@ import android.util.Pair;
 import com.google.android.apps.dashclock.LogUtils;
 import com.google.android.apps.dashclock.Utils;
 
-import net.nurik.roman.dashclock.R;
+import net.homeip.tedk.dash.R;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;

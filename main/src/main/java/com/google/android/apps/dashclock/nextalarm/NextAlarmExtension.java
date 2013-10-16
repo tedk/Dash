@@ -22,7 +22,7 @@ import com.google.android.apps.dashclock.api.DashClockExtension;
 import com.google.android.apps.dashclock.api.ExtensionData;
 import com.google.android.apps.dashclock.configuration.AppChooserPreference;
 
-import net.nurik.roman.dashclock.R;
+import net.homeip.tedk.dash.R;
 
 import android.content.Intent;
 import android.content.SharedPreferences;

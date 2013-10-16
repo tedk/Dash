@@ -59,7 +59,7 @@ import com.google.android.apps.dashclock.ui.UndoBarController;
 import com.mobeta.android.dslv.DragSortController;
 import com.mobeta.android.dslv.DragSortListView;
 
-import net.nurik.roman.dashclock.R;
+import net.homeip.tedk.dash.R;
 
 import java.util.ArrayList;
 import java.util.Collections;

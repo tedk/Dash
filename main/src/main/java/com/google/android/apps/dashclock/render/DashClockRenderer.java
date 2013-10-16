@@ -24,7 +24,7 @@ import com.google.android.apps.dashclock.configuration.AppChooserPreference;
 import com.google.android.apps.dashclock.configuration.AppearanceConfig;
 import com.google.android.apps.dashclock.configuration.ConfigurationActivity;
 
-import net.nurik.roman.dashclock.R;
+import net.homeip.tedk.dash.R;
 
 import android.appwidget.AppWidgetManager;
 import android.content.Context;

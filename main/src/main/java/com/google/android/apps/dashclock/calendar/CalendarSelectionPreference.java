@@ -16,7 +16,7 @@
 
 package com.google.android.apps.dashclock.calendar;
 
-import net.nurik.roman.dashclock.R;
+import net.homeip.tedk.dash.R;
 
 import android.app.AlertDialog.Builder;
 import android.content.AsyncQueryHandler;

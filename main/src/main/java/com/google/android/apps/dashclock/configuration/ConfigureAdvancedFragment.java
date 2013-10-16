@@ -18,7 +18,7 @@ package com.google.android.apps.dashclock.configuration;
 
 import com.google.android.apps.dashclock.render.DashClockRenderer;
 
-import net.nurik.roman.dashclock.R;
+import net.homeip.tedk.dash.R;
 
 import android.app.backup.BackupManager;
 import android.appwidget.AppWidgetManager;

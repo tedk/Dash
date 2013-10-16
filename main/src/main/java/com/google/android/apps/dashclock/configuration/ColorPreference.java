@@ -16,7 +16,7 @@
 
 package com.google.android.apps.dashclock.configuration;
 
-import net.nurik.roman.dashclock.R;
+import net.homeip.tedk.dash.R;
 
 import android.app.Activity;
 import android.app.AlertDialog;

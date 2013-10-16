@@ -16,8 +16,8 @@
 
 package com.google.android.apps.dashclock;
 
-import net.nurik.roman.dashclock.BuildConfig;
-import net.nurik.roman.dashclock.R;
+import net.homeip.tedk.dash.BuildConfig;
+import net.homeip.tedk.dash.R;
 
 import android.content.Context;
 import android.content.Intent;

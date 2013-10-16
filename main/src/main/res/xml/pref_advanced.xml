@@ -15,7 +15,7 @@
   -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res/net.nurik.roman.dashclock">
+    xmlns:app="http://schemas.android.com/apk/res/net.homeip.tedk.dash">
 
     <com.google.android.apps.dashclock.configuration.AppChooserPreference
         android:key="pref_clock_shortcut"

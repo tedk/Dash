@@ -44,8 +44,8 @@ import com.google.android.apps.dashclock.LogUtils;
 import com.google.android.apps.dashclock.Utils;
 import com.google.android.apps.dashclock.api.DashClockExtension;
 
-import net.nurik.roman.dashclock.BuildConfig;
-import net.nurik.roman.dashclock.R;
+import net.homeip.tedk.dash.BuildConfig;
+import net.homeip.tedk.dash.R;
 
 import static com.google.android.apps.dashclock.LogUtils.LOGD;
 
