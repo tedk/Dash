@@ -246,10 +246,12 @@ public class Utils {
             options.inJustDecodeBounds = false;
             options.inSampleSize = sampleSize;
 
-            return Utils.flattenExtensionIcon(
-                    context,
-                    BitmapFactory.decodeResource(packageRes, icon, options),
-                    color);
+//            return Utils.flattenExtensionIcon(
+//                    context,
+//                    BitmapFactory.decodeResource(packageRes, icon, options),
+//                    color);
+            
+            return BitmapFactory.decodeResource(packageRes, icon, options);
 
         } catch (PackageManager.NameNotFoundException e) {
             LOGE(TAG, "Couldn't access extension's package while loading icon data.");
@@ -280,10 +282,12 @@ public class Utils {
             options.inJustDecodeBounds = false;
             options.inSampleSize = sampleSize;
 
-            return Utils.flattenExtensionIcon(
-                    context,
-                    BitmapFactory.decodeFileDescriptor(pfd.getFileDescriptor(), null, options),
-                    0xffffffff);
+//            return Utils.flattenExtensionIcon(
+//                    context,
+//                    BitmapFactory.decodeFileDescriptor(pfd.getFileDescriptor(), null, options),
+//                    0xffffffff);
+            
+            return BitmapFactory.decodeFileDescriptor(pfd.getFileDescriptor(), null, options);
 
         } catch (IOException e) {
             LOGE(TAG, "Couldn't read icon from content URI.", e);
