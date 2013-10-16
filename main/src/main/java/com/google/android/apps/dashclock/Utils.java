@@ -87,27 +87,29 @@ public class Utils {
                 drawable.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(outBitmap);
         drawable.setBounds(0, 0, outBitmap.getWidth(), outBitmap.getHeight());
-        drawable.setColorFilter(color, PorterDuff.Mode.SRC_IN);
+//        drawable.setColorFilter(color, PorterDuff.Mode.SRC_IN);
         drawable.draw(canvas);
-        drawable.setColorFilter(null);
+//        drawable.setColorFilter(null);
         drawable.setCallback(null); // free up any references
         return outBitmap;
     }
 
     public static Drawable makeRecoloredDrawable(Context context, BitmapDrawable drawable,
             int color, boolean withStates) {
-        Bitmap recoloredBitmap = recolorBitmap(drawable, color);
-        BitmapDrawable recoloredDrawable = new BitmapDrawable(
-                context.getResources(), recoloredBitmap);
+//        Bitmap recoloredBitmap = recolorBitmap(drawable, color);
+//        BitmapDrawable recoloredDrawable = new BitmapDrawable(
+//                context.getResources(), recoloredBitmap);
 
         if (!withStates) {
-            return recoloredDrawable;
+//            return recoloredDrawable;
+        	return drawable;
         }
 
         StateListDrawable stateDrawable = new StateListDrawable();
         stateDrawable.addState(new int[]{android.R.attr.state_pressed}, drawable);
         stateDrawable.addState(new int[]{android.R.attr.state_focused}, drawable);
-        stateDrawable.addState(new int[]{}, recoloredDrawable);
+//        stateDrawable.addState(new int[]{}, recoloredDrawable);
+        stateDrawable.addState(new int[]{}, drawable);
         return stateDrawable;
     }
 
@@ -136,8 +138,9 @@ public class Utils {
             ImageView imageView = (ImageView) root;
             Drawable sourceDrawable = imageView.getDrawable();
             if (withStates && sourceDrawable != null && sourceDrawable instanceof BitmapDrawable) {
-                imageView.setImageDrawable(makeRecoloredDrawable(context,
-                        (BitmapDrawable) sourceDrawable, color, true));
+//                imageView.setImageDrawable(makeRecoloredDrawable(context,
+//                        (BitmapDrawable) sourceDrawable, color, true));
+            	  imageView.setImageDrawable(sourceDrawable);
             } else {
                 imageView.setColorFilter(color, PorterDuff.Mode.MULTIPLY);
             }
@@ -203,15 +206,16 @@ public class Utils {
                 Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(outBitmap);
         baseIcon.setBounds(0, 0, EXTENSION_ICON_SIZE, EXTENSION_ICON_SIZE);
-        baseIcon.setColorFilter(color, PorterDuff.Mode.SRC_IN);
+//        baseIcon.setColorFilter(color, PorterDuff.Mode.SRC_IN);
         baseIcon.draw(canvas);
-        baseIcon.setColorFilter(null);
+//        baseIcon.setColorFilter(null);
         baseIcon.setCallback(null); // free up any references
         return outBitmap;
     }
 
     public static Bitmap flattenExtensionIcon(Context context, Bitmap baseIcon, int color) {
-        return flattenExtensionIcon(new BitmapDrawable(context.getResources(), baseIcon), color);
+//        return flattenExtensionIcon(new BitmapDrawable(context.getResources(), baseIcon), color);
+    	return baseIcon;
     }
 
     public static Bitmap loadExtensionIcon(Context context, ComponentName extension,
@@ -246,12 +250,10 @@ public class Utils {
             options.inJustDecodeBounds = false;
             options.inSampleSize = sampleSize;
 
-//            return Utils.flattenExtensionIcon(
-//                    context,
-//                    BitmapFactory.decodeResource(packageRes, icon, options),
-//                    color);
-            
-            return BitmapFactory.decodeResource(packageRes, icon, options);
+            return Utils.flattenExtensionIcon(
+                    context,
+                    BitmapFactory.decodeResource(packageRes, icon, options),
+                    color);
 
         } catch (PackageManager.NameNotFoundException e) {
             LOGE(TAG, "Couldn't access extension's package while loading icon data.");
@@ -282,12 +284,10 @@ public class Utils {
             options.inJustDecodeBounds = false;
             options.inSampleSize = sampleSize;
 
-//            return Utils.flattenExtensionIcon(
-//                    context,
-//                    BitmapFactory.decodeFileDescriptor(pfd.getFileDescriptor(), null, options),
-//                    0xffffffff);
-            
-            return BitmapFactory.decodeFileDescriptor(pfd.getFileDescriptor(), null, options);
+            return Utils.flattenExtensionIcon(
+                    context,
+                    BitmapFactory.decodeFileDescriptor(pfd.getFileDescriptor(), null, options),
+                    0xffffffff);
 
         } catch (IOException e) {
             LOGE(TAG, "Couldn't read icon from content URI.", e);
