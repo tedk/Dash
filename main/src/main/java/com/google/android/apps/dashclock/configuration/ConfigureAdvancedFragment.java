@@ -21,9 +21,7 @@ import com.google.android.apps.dashclock.render.DashClockRenderer;
 import net.homeip.tedk.dash.R;
 
 import android.app.backup.BackupManager;
-import android.appwidget.AppWidgetManager;
 import android.content.ComponentName;
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -31,6 +29,7 @@ import android.preference.PreferenceFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 
 /**
  * Fragment for allowing the user to configure advanced widget settings, shown within a {@link
@@ -65,6 +64,8 @@ public class ConfigureAdvancedFragment extends PreferenceFragment
                 findPreference(DashClockRenderer.PREF_CLOCK_SHORTCUT));
         BaseSettingsActivity.bindPreferenceSummaryToValue(
                 findPreference(AppearanceConfig.PREF_HOMESCREEN_BACKGROUND_OPACITY));
+        BaseSettingsActivity.bindPreferenceSummaryToValue(
+                findPreference(AppearanceConfig.PREF_LOCKSCREEN_BACKGROUND_OPACITY));
     }
 
     @Override

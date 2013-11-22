@@ -30,6 +30,7 @@ import android.view.ViewGroup;
 
 import com.google.android.apps.dashclock.DaydreamService;
 
+
 /**
  * Fragment for allowing the user to configure daydream settings, shown within a {@link
  * ConfigurationActivity}.
