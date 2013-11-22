@@ -16,6 +16,7 @@
 
 package com.google.android.apps.dashclock.ui;
 
+import net.homeip.tedk.dash.R;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -24,8 +25,6 @@ import android.graphics.Path;
 import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.view.View;
-
-import net.nurik.roman.dashclock.R;
 
 public class PagerPositionStrip extends View {
     private int mPageCount;
