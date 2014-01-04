@@ -17,7 +17,6 @@
 package com.google.android.apps.dashclock.configuration;
 
 import net.homeip.tedk.dash.R;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -41,8 +40,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.apps.dashclock.Utils;
-
-import net.nurik.roman.dashclock.R;
 
 /**
  * A preference that allows the user to choose an application or shortcut.

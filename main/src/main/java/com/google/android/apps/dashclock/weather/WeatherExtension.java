@@ -16,13 +16,23 @@
 
 package com.google.android.apps.dashclock.weather;
 
-import com.google.android.apps.dashclock.LogUtils;
-import com.google.android.apps.dashclock.api.DashClockExtension;
-import com.google.android.apps.dashclock.api.ExtensionData;
-import com.google.android.apps.dashclock.configuration.AppChooserPreference;
+import static com.google.android.apps.dashclock.LogUtils.LOGD;
+import static com.google.android.apps.dashclock.LogUtils.LOGE;
+import static com.google.android.apps.dashclock.LogUtils.LOGW;
+import static com.google.android.apps.dashclock.Utils.MILLIS_NANOS;
+import static com.google.android.apps.dashclock.Utils.MINUTES_MILLIS;
+import static com.google.android.apps.dashclock.Utils.SECONDS_MILLIS;
+import static com.google.android.apps.dashclock.weather.YahooWeatherApiClient.getLocationInfo;
+import static com.google.android.apps.dashclock.weather.YahooWeatherApiClient.getWeatherForLocationInfo;
+import static com.google.android.apps.dashclock.weather.YahooWeatherApiClient.setWeatherUnits;
 
+import java.text.SimpleDateFormat;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.Locale;
+
+import net.homeip.tedk.dash.BuildConfig;
 import net.homeip.tedk.dash.R;
-
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -47,31 +57,13 @@ import com.google.android.apps.dashclock.LogUtils;
 import com.google.android.apps.dashclock.api.DashClockExtension;
 import com.google.android.apps.dashclock.api.ExtensionData;
 import com.google.android.apps.dashclock.configuration.AppChooserPreference;
+import com.google.android.apps.dashclock.weather.YahooWeatherApiClient.LocationInfo;
 import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesClient.ConnectionCallbacks;
+import com.google.android.gms.common.GooglePlayServicesClient.OnConnectionFailedListener;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.location.LocationClient;
 import com.google.android.gms.location.LocationRequest;
-
-import net.nurik.roman.dashclock.BuildConfig;
-import net.nurik.roman.dashclock.R;
-
-import java.text.SimpleDateFormat;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.Locale;
-
-import static com.google.android.apps.dashclock.LogUtils.LOGD;
-import static com.google.android.apps.dashclock.LogUtils.LOGE;
-import static com.google.android.apps.dashclock.LogUtils.LOGW;
-import static com.google.android.apps.dashclock.Utils.MINUTES_MILLIS;
-import static com.google.android.apps.dashclock.Utils.MILLIS_NANOS;
-import static com.google.android.apps.dashclock.Utils.SECONDS_MILLIS;
-import static com.google.android.apps.dashclock.weather.YahooWeatherApiClient.LocationInfo;
-import static com.google.android.apps.dashclock.weather.YahooWeatherApiClient.getLocationInfo;
-import static com.google.android.apps.dashclock.weather.YahooWeatherApiClient.getWeatherForLocationInfo;
-import static com.google.android.apps.dashclock.weather.YahooWeatherApiClient.setWeatherUnits;
-import static com.google.android.gms.common.GooglePlayServicesClient.ConnectionCallbacks;
-import static com.google.android.gms.common.GooglePlayServicesClient.OnConnectionFailedListener;
 
 /**
  * A local weather and forecast extension.
